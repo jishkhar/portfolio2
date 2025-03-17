@@ -1,11 +1,14 @@
-import Image from "next/image";
+import About from "@/components/About";
 
 export default function Home() {
   return (
     <>
-      <div className="text-8xl text-pink-500">
-        jishnu
-      </div>
+      <main>
+        <About />
+        <div className="text-pink-500">
+          home page
+        </div>
+      </main>
     </>
   );
 }
