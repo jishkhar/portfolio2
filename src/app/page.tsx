@@ -3,9 +3,9 @@ import About from "@/components/About";
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="bg-[#0b0c10]">
         <About />
-        <div className="text-pink-500">
+        <div>
           home page
         </div>
       </main>
