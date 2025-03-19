@@ -1,7 +1,9 @@
 const page = () => {
   return (
     <>
-        blogs
+        <div className="bg-[#0b0c10] h-screen">
+          blogs
+        </div>
     </>
   )
 }
