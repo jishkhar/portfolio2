@@ -9,11 +9,11 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="grid grid-cols-2 bg-[#09090b] px-40 h-24 items-center text-[1.3rem] text-white">
+    <div className="fixed top-0 left-0 w-full z-50 bg-[#0b0c10] px-40 h-24 flex items-center text-[1.3rem] text-white shadow-lg">
       <Link href="/">
         <div className="flex justify-start">Jishnu Khargharia</div>
       </Link>
-      <div className="flex justify-end gap-16">
+      <div className="ml-auto flex gap-16">
         {["/", "/projects", "/blog"].map((path, index) => (
           <Link key={index} href={path}>
             <div
