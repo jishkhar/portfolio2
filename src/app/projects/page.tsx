@@ -13,7 +13,27 @@ const project_data = [
     tech_stack: ["Rust", "TypeScript", "ReactJS", "TailwindCSS"],
     github: "https://github.com/example",
     website: "https://example.com",
-  }
+  },
+  {
+    image: "https://as1.ftcdn.net/v2/jpg/02/90/34/56/1000_F_290345698_p1Q14Obl6ywf5n0WdrHii2mmtWq97Y6n.jpg",
+    type: "AI",
+    project_title: "AI Assistant",
+    description:
+      "An AI-powered assistant that helps you with coding, research, and automation tasks using state-of-the-art LLMs.",
+    tech_stack: ["Python", "TensorFlow", "Next.js", "TailwindCSS"],
+    github: "https://github.com/example-ai",
+    website: "https://example-ai.com",
+  },
+  {
+    image: "https://as1.ftcdn.net/v2/jpg/02/90/34/56/1000_F_290345698_p1Q14Obl6ywf5n0WdrHii2mmtWq97Y6n.jpg",
+    type: "AI",
+    project_title: "AI Assistant",
+    description:
+      "An AI-powered assistant that helps you with coding, research, and automation tasks using state-of-the-art LLMs.",
+    tech_stack: ["Python", "TensorFlow", "Next.js", "TailwindCSS"],
+    github: "https://github.com/example-ai",
+    website: "https://example-ai.com",
+  },
 ];
 
 type Project = {
@@ -26,33 +46,41 @@ type Project = {
   website: string;
 };
 
-const ProjectCard = ({ project }: { project: Project }) => {
+const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
+  const isReversed = index % 2 === 1;
+
   return (
-    <div className="flex flex-col md:flex-row items-center max-w-6xl mx-auto mb-8 border border-gray-800 rounded-lg overflow-hidden relative">
+    <div className={`flex flex-col md:flex-row ${isReversed ? "md:flex-row-reverse right-28" : "left-28"} items-center max-w-7xl mx-auto overflow-hidden relative mb-40`}>
       {/* Project Screenshot */}
       <div className="md:w-2/3 relative">
         <Image
           src={project.image}
           alt={`${project.project_title} Screenshot`}
-          width={1400}
+          width={1200}
           height={500}
-          className="w-full h-[400px] object-cover"
+          className="w-[800px] h-[430px] object-cover"
         />
       </div>
 
       {/* Project Details */}
-      <div className="md:w-1/4 flex flex-col justify-between h-full p-6 relative">
+      <div className="md:w-[40%] flex flex-col justify-between h-full pl-6 py-16 relative">
         {/* Project Info Top Right */}
-        <div className="absolute top-4 right-4 text-right">
-          <div className="text-teal-400 font-mono text-lg">{project.type}</div>
-          <h2 className="text-3xl font-bold text-white mb-4">{project.project_title}</h2>
+        <div className={`absolute top-0 ${isReversed ? "left-10 text-left" : "right-10 text-right"}`}>
+          <div className="text-teal-400 font-mono text-xl">{project.type}</div>
+          <h2 className="text-4xl font-bold text-white mb-4">{project.project_title}</h2>
         </div>
-        <p className="text-gray-200 text-lg mb-4 mt-12 w-[120%] absolute -left-12 bg-gray-900 p-4 rounded-lg backdrop-blur-sm">{project.description}</p>
-        <div className="flex flex-col items-end mt-40">
-          <div className="font-mono text-md text-gray-400 mt-4 mb-6">
+
+        {/* Description */}
+        <p className={`text-gray-200 text-lg mb-4 mt-16 w-[110%] absolute top-10 ${isReversed ? "left-9" : "-left-20"} bg-[#15171F] p-10 rounded-lg backdrop-blur-sm transition-shadow duration-300 hover:shadow-lg hover:shadow-black`}>
+          {project.description}
+        </p>
+
+        {/* Tech Stack & Links */}
+        <div className={`flex flex-col ${isReversed ? "items-start" : "items-end"} mt-40`}>
+          <div className={`font-mono text-md text-gray-400 mt-20 ${isReversed ? "ml-3" : "mr-8"}`}>
             | {project.tech_stack.join(" | ")}
           </div>
-          <div className="flex space-x-4">
+          <div className={`flex space-x-4 pt-10 absolute bottom-1 ${isReversed ? "ml-3" : "mr-8"}`}>
             <Link href={project.github} className="text-white hover:text-gray-300 transition" target="_blank">
               <FiGithub className="w-7 h-7" />
             </Link>
@@ -69,9 +97,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
 export default function PortfolioShowcase() {
   return (
     <div className="bg-black text-white min-h-screen p-8">
-      <h1 className="text-6xl font-bold mb-16">Things I've Built</h1>
+      <h1 className="text-6xl font-bold pt-20 pb-24 pl-40 ">Things I've Built</h1>
       {project_data.map((project, index) => (
-        <ProjectCard key={index} project={project} />
+        <ProjectCard key={index} project={project} index={index} />
       ))}
     </div>
   );
