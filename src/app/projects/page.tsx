@@ -66,26 +66,26 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       <div className="md:w-[40%] flex flex-col justify-between h-full pl-6 py-16 relative">
         {/* Project Info Top Right */}
         <div className={`absolute top-0 ${isReversed ? "left-10 text-left" : "right-10 text-right"}`}>
-          <div className="text-teal-400 font-mono text-xl">{project.type}</div>
-          <h2 className="text-4xl font-bold text-white mb-4">{project.project_title}</h2>
+          <div className="text-teal-400 font-mono text-[1.3rem]">{project.type}</div>
+          <h2 className="text-[2.3rem] font-bold text-white mb-4">{project.project_title}</h2>
         </div>
 
         {/* Description */}
-        <p className={`text-gray-200 text-lg mb-4 mt-16 w-[110%] absolute top-10 ${isReversed ? "left-9" : "-left-20"} bg-[#15171F] p-10 rounded-lg backdrop-blur-sm transition-shadow duration-300 hover:shadow-lg hover:shadow-black`}>
+        <p className={`text-gray-200 text-[1.15rem] mb-4 mt-16 w-[110%] absolute top-10 ${isReversed ? "left-9" : "-left-20"} bg-[#15171F] p-10 rounded-lg backdrop-blur-sm transition-shadow duration-300 hover:shadow-lg hover:shadow-black`}>
           {project.description}
         </p>
 
         {/* Tech Stack & Links */}
         <div className={`flex flex-col ${isReversed ? "items-start" : "items-end"} mt-40`}>
-          <div className={`font-mono text-md text-gray-400 mt-20 ${isReversed ? "ml-3" : "mr-8"}`}>
+          <div className={`font-mono text-[1rem] text-gray-400 mt-20 ${isReversed ? "ml-3" : "mr-8"}`}>
             | {project.tech_stack.join(" | ")}
           </div>
           <div className={`flex space-x-4 pt-10 absolute bottom-1 ${isReversed ? "ml-3" : "mr-8"}`}>
-            <Link href={project.github} className="text-white hover:text-gray-300 transition" target="_blank">
+            <Link href={project.github} className="text-white hover:text-gray-400 transition" target="_blank">
               <FiGithub className="w-7 h-7" />
             </Link>
-            <Link href={project.website} className="text-white hover:text-gray-300 transition" target="_blank">
-              <TbExternalLink className="w-7 h-7" />
+            <Link href={project.website} className="text-white hover:text-gray-400 transition" target="_blank">
+              <TbExternalLink className="w-8 h-8" />
             </Link>
           </div>
         </div>
@@ -97,7 +97,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 export default function PortfolioShowcase() {
   return (
     <div className="bg-[#0b0c10] text-white min-h-screen p-8">
-      <h1 className="text-6xl font-bold pt-32 pb-24 pl-40 ">Things I've Built</h1>
+      <h1 className="text-[2.8rem] font-bold pt-32 pb-24 pl-40 ">Things I've Built</h1>
       {project_data.map((project, index) => (
         <ProjectCard key={index} project={project} index={index} />
       ))}

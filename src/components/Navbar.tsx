@@ -9,7 +9,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-[#0b0c10] px-40 h-24 flex items-center text-[1.3rem] text-white shadow-lg">
+    <div className="fixed top-0 left-0 w-full z-50 bg-[#0b0c10] px-40 h-24 flex items-center text-[1.1rem] text-white shadow-lg">
       <Link href="/">
         <div className="flex justify-start">Jishnu Khargharia</div>
       </Link>
