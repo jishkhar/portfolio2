@@ -2,7 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: [ "as1.ftcdn.net"], // Add the required domain
+    domains: [ 
+      "as1.ftcdn.net",
+      "api.microlink.io",
+    ],
   },
 };
 
