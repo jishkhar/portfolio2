@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 const Footer = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-4 text-center">
-            <div className="mb-2">Built by Jishnu Khargharia</div>
+        <div className="flex flex-col items-center justify-center pt-4 text-center">
+            <div className="mb-4 text-[1.2rem]">Built by Jishnu Khargharia</div>
             <div className="flex space-x-4">
                 <Link href="https://github.com/jishkhar" target="_blank">
                     <FiGithub className="w-6 h-6 hover:text-[#5ee6dd] hover:scale-125 transition hover:rotate-[5deg]" />
