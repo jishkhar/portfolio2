@@ -12,7 +12,7 @@ const project_data = [
       "Fintalk: An intelligent AI advisor that simplifies legal complexities with precise, reliable insights.",
     tech_stack: ["Python", "SarvamAI", "Streamlit", "Gemini"],
     github: "https://github.com/jishkhar/fintalk",
-    website: "/pagenotfound",
+    website: "https://fintalk.streamlit.app/",
   },
   {
     image: "/images/corsit.png",
