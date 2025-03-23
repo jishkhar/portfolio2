@@ -101,10 +101,10 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
             | {project.tech_stack.join(" | ")}
           </div>
           <div className={`flex space-x-4 pt-10 absolute bottom-1 ${isReversed ? "ml-3" : "mr-8"}`}>
-            <Link href={project.github} className="text-white hover:text-gray-400 transition" target="_blank">
+            <Link href={project.github} className="text-white hover:text-[#5ee6dd] hover:rotate-3 hover:scale-105 transition" target="_blank">
               <FiGithub className="w-7 h-7" />
             </Link>
-            <Link href={project.website} className="text-white hover:text-gray-400 transition" target="_blank">
+            <Link href={project.website} className="text-white hover:text-[#5ee6dd] hover:rotate-3 hover:scale-105 transition" target="_blank">
               <TbExternalLink className="w-8 h-8" />
             </Link>
           </div>
@@ -117,7 +117,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 export default function PortfolioShowcase() {
   return (
     <div className="bg-[#0b0c10] text-white min-h-screen p-8">
-      <h1 className="text-[3.2rem] font-bold pt-32 pb-24 pl-40 ">Things I&apos;ve Built</h1>
+      <h1 className="text-[3.2rem] font-bold pt-32 pb-24 pl-40 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Things I&apos;ve Built</h1>
       {project_data.map((project, index) => (
         <ProjectCard key={index} project={project} index={index} />
       ))}
