@@ -49,32 +49,36 @@ const Skills = () => {
   };
 
   return (
-    <div className="h-fit mx-72 py-20 text-gray-100">
-      <div className="text-[2.4rem] mb-10 font-semibold">Technologies that I've worked with...</div>
+    <div className="h-fit mx-72 pt-40 mb-40 text-gray-100">
+      <div className="text-[2.4rem] mb-10 font-semibold">Technologies that I&apos;ve worked with...</div>
       <div className="flex space-x-4 my-7 text-[1.2rem]">
         {tabs.map((tab) => (
           <button
             key={tab.id}
-            className={`px-6 py-3 rounded-lg transition-all duration-200 font-medium shadow-lg ${
-              activeTab === tab.id
-                ? "bg-[#45a29e] text-[#0b0c10]"
-                : "bg-[#1f2833] text-gray-300 hover:bg-[#66fcf1] hover:text-[#0b0c10]"
-            }`}
+            className={`px-6 py-3 rounded-lg transition-all duration-200 font-medium shadow-lg ${activeTab === tab.id
+              ? "bg-[#45a29e] text-[#0b0c10]"
+              : "bg-[#1f2833] text-gray-300 hover:bg-[#66fcf1] hover:text-[#0b0c10]"
+              }`}
             onClick={() => setActiveTab(tab.id)}
           >
             {tab.label}
           </button>
         ))}
       </div>
-      <div className="p-6 py-10 bg-[#0b0c10] rounded-lg shadow-md text-[1.2rem] flex flex-wrap gap-4">
-        {categorizedTech[activeTab as keyof typeof categorizedTech]?.map((tech, index) => (
-          <div
-            key={index}
-            className="bg-[#66fcf1] text-[#66fcf1] px-10 py-4 rounded-full shadow-md hover:bg-[#45a29e] hover:text-[#0b0c10] transition-all duration-200"
-          >
-            <LinkPreview url={techLinks[tech as keyof typeof techLinks]}>{tech}</LinkPreview>
-          </div>
-        ))}
+      <div className="p-6 py-10 bg-[#0b0c10] rounded-lg shadow-md">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-[#f8f9fa]">
+          {categorizedTech[activeTab as keyof typeof categorizedTech]?.map((tech, index) => (
+            <li key={index} className="flex items-center gap-3 bg-[#1f2833] p-3 rounded-lg shadow-md">
+              <span className="w-2 h-2 border-4 border-[#66fcf1] rotate-45 inline-block"></span>
+              <LinkPreview
+                url={techLinks[tech as keyof typeof techLinks]}
+                className="hover:text-[#66fcf1] text-white transition-colors duration-200"
+              >
+                {tech}
+              </LinkPreview>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

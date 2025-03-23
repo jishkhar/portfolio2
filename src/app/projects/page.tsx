@@ -97,7 +97,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 export default function PortfolioShowcase() {
   return (
     <div className="bg-[#0b0c10] text-white min-h-screen p-8">
-      <h1 className="text-[3.2rem] font-bold pt-32 pb-24 pl-40 ">Things I've Built</h1>
+      <h1 className="text-[3.2rem] font-bold pt-32 pb-24 pl-40 ">Things I&apos;ve Built</h1>
       {project_data.map((project, index) => (
         <ProjectCard key={index} project={project} index={index} />
       ))}
