@@ -50,20 +50,11 @@ const AboutMe = () => {
                         />
                     </div>
                 </div>
-                <div id='right' className="w-1/2 p-4 text-[#ffffffac] text-[1.3rem]">
+                <div id='right' className="w-1/2 pt-44 pl-10 text-[#ffffffac] text-[1.3rem]">
                     <p>
                         Hey there! I'm Jishnu Khargharia, a passionate full-stack developer with a strong interest in AI, ML, and Web3. Currently pursuing Computer Science and Engineering (AI & ML), I thrive on building impactful digital experiences that blend innovation with functionality.
                     </p>
                     <br />
-                    <p>
-                        <span className='text-[2rem] underline decoration-[#5ee6dd] underline-offset-4'>What I Do:</span>
-                        <br />
-                        <span className='underline'>Front-End Development:</span> Crafting sleek, responsive UIs using React, Tailwind CSS, and Framer Motion.
-                        <br /><br />
-                        <span className='underline'>Back-End Development:</span> Developing robust server-side solutions with Node.js, Express, and MongoDB.
-                        <br /><br />
-                        <span className='underline'>AI & ML:</span> Exploring machine learning applications and integrating AI into real-world projects.
-                    </p>
                     <br />
                     <p>
                         Also, Me and my friends founded a tech community in our college to bring together tech enthusiasts and foster a culture of learning. We organize sessions for our batchmates and juniors on essential technologies like Git, GitHub, web development, AI, and more. Our goal is to create a collaborative space where students can explore, build, and grow together.
