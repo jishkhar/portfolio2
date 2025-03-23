@@ -65,8 +65,8 @@ const Skills = () => {
           </button>
         ))}
       </div>
-      <div className="p-6 py-10 bg-[#0b0c10] rounded-lg shadow-md">
-        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-[#f8f9fa]">
+      <div className="p-6 py-10 bg-[#0b0c10] rounded-lg shadow-md h-64 overflow-y-auto">
+      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-[#f8f9fa]">
           {categorizedTech[activeTab as keyof typeof categorizedTech]?.map((tech, index) => (
             <li key={index} className="flex items-center gap-3 bg-[#1f2833] p-3 rounded-lg shadow-md">
               <span className="w-2 h-2 border-4 border-[#66fcf1] rotate-45 inline-block"></span>
