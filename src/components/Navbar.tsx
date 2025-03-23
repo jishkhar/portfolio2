@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="flex justify-start">Jishnu Khargharia</div>
       </Link>
       <div className="ml-auto flex gap-16">
-        {["/", "/projects", "/blog"].map((path, index) => (
+        {["/", "/projects", "/about" , "/blog"].map((path, index) => (
           <Link key={index} href={path}>
             <div
               className={`${
