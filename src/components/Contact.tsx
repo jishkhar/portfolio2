@@ -53,7 +53,7 @@ const Contact = () => {
         </div>
         {/* Right Div */}
         <div className="w-1/2 p-10 border rounded-lg border-[#54ccc4]">
-          <h2 className="text-[2.5rem] font-semibold text-center mb-6">Contact Us</h2>
+          <h2 className="text-[2.5rem] font-semibold text-center mb-6 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Contact Us</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="block text-[1.3rem]">Name</label>

@@ -50,7 +50,7 @@ const Skills = () => {
 
   return (
     <div className="h-fit mx-72 pt-72 mb-40 text-gray-100">
-      <div className="text-[2.4rem] mb-10 font-semibold">Technologies that I&apos;ve worked with...</div>
+      <div className="text-[2.4rem] mb-10 font-semibold underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Technologies that I&apos;ve worked with...</div>
       <div className="flex space-x-4 my-7 text-[1.2rem]">
         {tabs.map((tab) => (
           <button
