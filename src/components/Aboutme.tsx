@@ -4,6 +4,7 @@ import Image from "next/image";
 const AboutMe = () => {
     return (
         <>
+            <div className='mb-32'>
             <div className="pl-72 pt-40 pb-20 text-xl font-semibold my-4">
                 <p className='text-[2.5rem]'>
                     Little bit About Me
@@ -68,6 +69,7 @@ const AboutMe = () => {
                         Also, Me and my friends founded a tech community in our college to bring together tech enthusiasts and foster a culture of learning. We organize sessions for our batchmates and juniors on essential technologies like Git, GitHub, web development, AI, and more. Our goal is to create a collaborative space where students can explore, build, and grow together.
                     </p>
                 </div>
+            </div>
             </div>
         </>
     )
