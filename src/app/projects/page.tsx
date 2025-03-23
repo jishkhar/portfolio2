@@ -5,34 +5,54 @@ import { TbExternalLink } from "react-icons/tb";
 
 const project_data = [
   {
-    image: "https://as1.ftcdn.net/v2/jpg/02/90/34/56/1000_F_290345698_p1Q14Obl6ywf5n0WdrHii2mmtWq97Y6n.jpg",
-    type: "DeFi",
-    project_title: "NexusFi",
+    image: "/images/FinTalk.jpeg",
+    type: "AI",
+    project_title: "FinTalk",
     description:
-      "NexusFi is a Decentralized Finance Platform where users can create indexes of their favorite tokens and trade them.",
-    tech_stack: ["Rust", "TypeScript", "ReactJS", "TailwindCSS"],
-    github: "https://github.com/example",
-    website: "https://example.com",
+      "Fintalk: An intelligent AI advisor that simplifies legal complexities with precise, reliable insights.",
+    tech_stack: ["Python", "SarvamAI", "Streamlit", "Gemini"],
+    github: "https://github.com/jishkhar/fintalk",
+    website: "/pagenotfound",
   },
   {
-    image: "https://as1.ftcdn.net/v2/jpg/02/90/34/56/1000_F_290345698_p1Q14Obl6ywf5n0WdrHii2mmtWq97Y6n.jpg",
-    type: "AI",
-    project_title: "AI Assistant",
+    image: "/images/corsit.png",
+    type: "FullStack Website",
+    project_title: "Corsit.in",
     description:
-      "An AI-powered assistant that helps you with coding, research, and automation tasks using state-of-the-art LLMs.",
-    tech_stack: ["Python", "TensorFlow", "Next.js", "TailwindCSS"],
-    github: "https://github.com/example-ai",
-    website: "https://example-ai.com",
+      "A dynamic full-stack robotics club website with login, project management, and interactive showcases for projects, events, and innovations.",
+    tech_stack: ["ReactJS", "JavaScript", "NodeJS", "Express"],
+    github: "https://github.com/Dhruva-D/Corsit",
+    website: "https://www.corsit.in/",
   },
   {
-    image: "https://as1.ftcdn.net/v2/jpg/02/90/34/56/1000_F_290345698_p1Q14Obl6ywf5n0WdrHii2mmtWq97Y6n.jpg",
-    type: "AI",
-    project_title: "AI Assistant",
+    image: "/images/quiz.png",
+    type: "Web App",
+    project_title: "Quizzify",
     description:
-      "An AI-powered assistant that helps you with coding, research, and automation tasks using state-of-the-art LLMs.",
-    tech_stack: ["Python", "TensorFlow", "Next.js", "TailwindCSS"],
-    github: "https://github.com/example-ai",
-    website: "https://example-ai.com",
+      "Developed an interactive quizzing web app leveraging JavaScript and real-time API integration for seamless data retrieval.",
+    tech_stack: ["JavaScript", "APIs", "Tone.js"],
+    github: "https://github.com/jishkhar/Quiz-App",
+    website: "https://quiz-app-self-zeta.vercel.app/",
+  },
+  {
+    image: "/images/tedx.png",
+    type: "Website",
+    project_title: "TEDx Webiste",
+    description:
+      "Developed a dynamic and visually appealing website for my college's TEDx club.",
+    tech_stack: ["ReactJS", "JavaScript", "Framer Motion", "Spline"],
+    github: "https://github.com/jishkhar/tedx-website",
+    website: "https://tedx-website-xi.vercel.app/",
+  },
+  {
+    image: "/images/todo.png",
+    type: "Web App",
+    project_title: "Listify",
+    description:
+      "A sleek and efficient to-do app leveraging React and LocalStorage for seamless task management with persistent state.",
+    tech_stack: ["ReactJS", "JavaScipt"],
+    github: "https://github.com/jishkhar/Todo-React",
+    website: "https://todo-react-two-sandy.vercel.app/",
   },
 ];
 
