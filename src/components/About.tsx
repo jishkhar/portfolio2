@@ -6,34 +6,44 @@ import Link from "next/link";
 
 const About = () => {
     return (
-        <div className="h-fit my-40 mx-72 flex flex-col md:flex-row items-center text-white">
-            <div id="left" className="max-w-2xl md:text-left">
-                <div className="text-[3.8rem] font-bold">Jishnu Khargharia</div>
-                <div className='flex justify-center md:justify-start items-center text-gray-500 text-[1.2rem] ml-1'>
+        <div className="h-fit my-20 mx-6 md:mx-20 lg:mx-40 flex flex-col md:flex-row items-center text-white">
+            <div id="right" className="md:order-2 flex justify-center md:justify-end md:w-1/2 mb-10 md:mb-0">
+                <Image
+                    src="/images/me1.jpg"
+                    alt="Profile_Photo"
+                    width={350}
+                    height={350}
+                    className="shadow-lg rounded-xl w-60 sm:w-72 md:w-[450px]"
+                />
+            </div>
+            
+            <div id="left" className="max-w-2xl text-center md:text-left md:order-1">
+                <div className="text-4xl sm:text-5xl font-bold">Jishnu Khargharia</div>
+                <div className='flex flex-wrap justify-center md:justify-start items-center text-gray-500 text-lg mt-2'>
                     <span>FullStack Developer</span>
-                    <Dot />
+                    <Dot className="hidden sm:inline" />
                     <span>Competitive Programmer</span>
-                    <Dot />
+                    <Dot className="hidden sm:inline" />
                     <span>AI & ML</span>
                 </div>
-                <div className="text-[#ffffffac] ml-1 mt-10 text-[1.4rem]">
+                <div className="text-[#ffffffac] mt-6 text-lg sm:text-xl px-2 md:px-0">
                     <p>
                         I’m a full-stack developer passionate about AI, building scalable solutions with clean, maintainable code. I ship fast, break nothing, and optimize performance with solid DevOps practices and AI-driven innovation.
                     </p>
                 </div>
-                <div className='flex mt-12 space-x-7 text-[1.3rem]'>
-                    <div className='text-black rounded-lg border border-black bg-[#5ee6dd] p-3 cursor-pointer hover:scale-105'>
+                <div className='flex flex-col sm:flex-row items-center mt-8 space-y-4 sm:space-y-0 sm:space-x-7 text-lg'>
+                    <div className='text-black rounded-lg border border-black bg-[#5ee6dd] px-6 py-3 cursor-pointer hover:scale-105'>
                         <Link href="/#contact">
                             Contact Me
                         </Link>
                     </div>
-                    <div className='rounded-lg border-2 border-[#5ee6dd] p-3 cursor-pointer hover:scale-105'>
+                    <div className='rounded-lg border-2 border-[#5ee6dd] px-6 py-3 cursor-pointer hover:scale-105'>
                         <Link href="/">
                             Resume
                         </Link>
                     </div>
                 </div>
-                <div id="icons" className="flex space-x-8 pt-8 pl-1 text-[1.8rem]">
+                <div id="icons" className="flex justify-center md:justify-start space-x-6 sm:space-x-8 pt-8 text-2xl">
                     <Link href="https://github.com/jishkhar" target="_blank" rel="noopener noreferrer">
                         <FiGithub className="cursor-pointer transition-all duration-300 hover:text-[#5fe9df] hover:scale-125" />
                     </Link>
@@ -47,16 +57,6 @@ const About = () => {
                         <MdOutlineEmail className="cursor-pointer transition-all duration-300 hover:text-[#5fe9df] hover:scale-125" />
                     </Link>
                 </div>
-            </div>
-
-            <div id="right" className="mt-6 md:mt-0 md:w-1/2 flex justify-center md:justify-end relative">
-                <Image
-                    src="/images/me1.jpg"
-                    alt="Profile_Photo"
-                    width={450}
-                    height={450}
-                    className="shadow-lg relative rounded-xl"
-                />
             </div>
         </div>
     );
