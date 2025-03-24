@@ -2,6 +2,9 @@
 import React from "react";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { div } from "motion/react-client";
+import { SiReact, SiNextdotjs, SiTypescript, SiJavascript, SiHtml5, SiCss3, SiTailwindcss, SiVuedotjs, SiNodedotjs ,SiExpress, SiDjango, SiGraphql, SiPostgresql, SiMongodb, SiRedis, SiFirebase, SiMysql, SiGit, SiDocker, SiGitlab, SiJira, SiPython, SiCplusplus, SiGo } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+import { FaJava } from "react-icons/fa6";
 
 const Skills = () => {
   const categories = [
@@ -11,6 +14,35 @@ const Skills = () => {
     { id: "tools", label: "Tools", techs: ["Git", "Docker", "VS Code", "CI/CD", "Jira"] },
     { id: "languages", label: "Languages", techs: ["JavaScript", "Python", "Java", "C++", "Go"] }
   ];
+
+  const techIcons = {
+    "React": SiReact,
+    "Next.js": SiNextdotjs,
+    "TypeScript": SiTypescript,
+    "JavaScript": SiJavascript,
+    "HTML5": SiHtml5,
+    "CSS3": SiCss3,
+    "Tailwind CSS": SiTailwindcss,
+    "Vue.js": SiVuedotjs,
+    "Node.js": SiNodedotjs,
+    "Express": SiExpress,
+    "Django": SiDjango,
+    "GraphQL": SiGraphql,
+    "PostgreSQL": SiPostgresql,
+    "MongoDB": SiMongodb,
+    "Redis": SiRedis,
+    "Firebase": SiFirebase,
+    "MySQL": SiMysql,
+    "Git": SiGit,
+    "Docker": SiDocker,
+    "VS Code": VscVscode,
+    "CI/CD": SiGitlab,
+    "Jira": SiJira,
+    "Python": SiPython,
+    "Java": FaJava,
+    "C++": SiCplusplus,
+    "Go": SiGo
+  };
 
   const techLinks = {
     "React": "https://react.dev/",
@@ -25,7 +57,6 @@ const Skills = () => {
     "Express": "https://expressjs.com/",
     "Django": "https://www.djangoproject.com/",
     "GraphQL": "https://graphql.org/",
-    "REST API": "https://restfulapi.net/",
     "PostgreSQL": "https://www.postgresql.org/",
     "MongoDB": "https://www.mongodb.com/",
     "Redis": "https://redis.io/",
@@ -55,21 +86,23 @@ const Skills = () => {
               <div className="relative min-h-[350px] p-6 rounded-lg border shadow-md hover:-translate-y-2 hover:-translate-x-2 transition-transform bg-[#0d0e13]">
                 <h3 className="text-[2rem] text-[#5ee6dd] text-center font-semibold mb-10">{category.label}</h3>
                 <div className="flex flex-wrap gap-x-6 gap-y-4">
-                  {category.techs.map((tech) => (
-                    <LinkPreview
-                      key={tech}
-                      url={techLinks[tech as keyof typeof techLinks]}
-                      className="px-3 py-2 border bg-[#3a4544] border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 text-white hover:text-black transition-all"
-                    >
-                      {tech}
-                    </LinkPreview>
-                  ))}
+                  {category.techs.map((tech) => {
+                    const Icon = techIcons[tech as keyof typeof techIcons];
+                    return (
+                      <LinkPreview
+                        key={tech}
+                        url={techLinks[tech as keyof typeof techLinks]}
+                        className="flex items-center gap-2 px-3 py-2 border bg-[#3a4544] border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 text-white hover:text-black transition-all"
+                      >
+                        {Icon && <Icon className="text-xl" />} <span>{tech}</span>
+                      </LinkPreview>
+                    );
+                  })}
                 </div>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </>
   );
