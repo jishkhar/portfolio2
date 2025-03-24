@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Jishnu Khargharia",
   description: "A personal portfolio website",
   icons: {
-    icon: "/images/logo.jpg",
+    icon: "/images/logo.png",
   },
 
 };
