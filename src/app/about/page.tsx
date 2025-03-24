@@ -28,7 +28,7 @@ const AboutMe = () => {
 
                     <div id='right' className="w-full md:w-1/2 text-[#ffffffac] text-[1.3rem] text-center md:text-left pt-10 md:pt-32">
                         <p>
-                            <span>Hey there!</span><br /><br /> I'm <span className='text-[#5ee6dd] text-[1.5rem]'>Jishnu Khargharia</span>, a passionate full-stack developer with a strong interest in AI, ML, and Web3. Currently pursuing Computer Science and Engineering (AI & ML), I thrive on building impactful digital experiences that blend innovation with functionality.
+                            <span>Hey there!</span><br /><br /> I&apos;m <span className='text-[#5ee6dd] text-[1.5rem]'>Jishnu Khargharia</span>, a passionate full-stack developer with a strong interest in AI, ML, and Web3. Currently pursuing Computer Science and Engineering (AI & ML), I thrive on building impactful digital experiences that blend innovation with functionality.
                         </p>
                         <br />
                         <p>

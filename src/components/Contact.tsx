@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import { MdOutlineEmail } from 'react-icons/md';
 import Link from "next/link";
 
