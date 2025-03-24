@@ -75,14 +75,14 @@ const Skills = () => {
   return (
     <>
       <div className="mb-20 px-4">
-        <div className="max-w-[90vw] mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl mt-20 mb-10 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Tech Stack</h1>
+        <div className="max-w-[90vw] mx-auto pl-52 pt-20 pb-12">
+          <h1 className="text-3xl sm:text-[3.2rem] mt-20 mb-10 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Tech Stack</h1>
         </div>
-        <div className="mx-auto max-w-[90vw] p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-900">
+        <div className="mx-auto max-w-[70vw] p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-900">
           {categories.map((category) => (
             <div key={category.id} className="relative">
               <div className="bg-[#5ee6dd] rounded-lg absolute inset-0"></div>
-              <div className="relative min-h-[300px] p-4 sm:p-6 rounded-lg border shadow-md hover:-translate-y-2 hover:-translate-x-2 transition-transform bg-[#0d0e13]">
+              <div className="relative min-h-[320px] p-4 sm:p-6 rounded-lg border shadow-md hover:-translate-y-2 hover:-translate-x-2 transition-transform bg-[#0d0e13]">
                 <h3 className="text-xl sm:text-2xl text-[#5ee6dd] text-center font-semibold mb-6">{category.label}</h3>
                 <div className="flex flex-wrap gap-x-4 gap-y-3 justify-center">
                   {category.techs.map((tech) => {
