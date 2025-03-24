@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { LinkPreview } from "@/components/ui/link-preview";
+import { div } from "motion/react-client";
 
 const Skills = () => {
   const categories = [
@@ -47,22 +48,26 @@ const Skills = () => {
         <div className="max-w-[70vw] mx-auto">
           <h1 className="text-[3.2rem] ml-4 mt-52 my-10 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Tech Stack</h1>
         </div>
-        <div className="mx-auto max-w-[70vw] p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-900">
+        <div className="mx-auto max-w-[70vw] p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-gray-900">
           {categories.map((category) => (
-            <div key={category.id} className="p-6 rounded-lg border shadow-md">
-              <h3 className="text-xl text-[#5ee6dd] font-semibold mb-3">{category.label}</h3>
-              <div className="flex flex-wrap gap-4">
+            <div className="relative">
+            <div className="bg-[#5ee6dd] rounded-lg absolute inset-0"></div>
+            <div key={category.id} className="relative min-h-[350px] p-6 rounded-lg border shadow-md hover:-translate-y-2 hover:-translate-x-2 transition-transform bg-[#0d0e13]">
+              <h3 className="text-[2rem] text-[#5ee6dd] text-center font-semibold mb-10">{category.label}</h3>
+              <div className="flex flex-wrap gap-x-6 gap-y-4">
                 {category.techs.map((tech) => (
                   <LinkPreview
                     key={tech}
                     url={techLinks[tech as keyof typeof techLinks]}
-                    className="px-3 py-2 border  bg-[#3a4544] border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 text-white hover:text-black transition-all"
+                    className="px-3 py-2 border bg-[#3a4544] border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 text-white hover:text-black transition-all"
                   >
                     {tech}
                   </LinkPreview>
                 ))}
               </div>
             </div>
+          </div>
+          
           ))}
         </div>
       </div>
