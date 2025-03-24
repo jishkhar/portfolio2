@@ -12,6 +12,10 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Jishnu Khargharia",
   description: "A personal portfolio website",
+  icons: {
+    icon: "/images/logo.jpg",
+  },
+
 };
 
 export default function RootLayout({
