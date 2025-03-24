@@ -38,7 +38,7 @@ const About = () => {
                         </Link>
                     </div>
                     <div className='rounded-lg border-2 border-[#5ee6dd] px-6 py-3 cursor-pointer hover:scale-105'>
-                        <Link href="/">
+                        <Link href="https://drive.google.com/file/d/123nyjqWX_lWHTLJMj_sp-fpKrogdJcrK/view?usp=sharing">
                             Resume
                         </Link>
                     </div>
