@@ -38,9 +38,10 @@ const About = () => {
                         </Link>
                     </div>
                     <div className='rounded-lg border-2 border-[#5ee6dd] px-6 py-3 cursor-pointer hover:scale-105'>
-                        <Link href="https://drive.google.com/file/d/123nyjqWX_lWHTLJMj_sp-fpKrogdJcrK/view?usp=sharing">
-                            Resume
-                        </Link>
+                    <a href="https://drive.google.com/file/d/123nyjqWX_lWHTLJMj_sp-fpKrogdJcrK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+    Resume
+</a>
+
                     </div>
                 </div>
                 <div id="icons" className="flex justify-center md:justify-start space-x-6 sm:space-x-8 pt-8 pl-1 text-[1.8rem]">
