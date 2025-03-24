@@ -28,7 +28,7 @@ const About = () => {
                 </div>
                 <div className="text-[#ffffffac] mt-6 text-lg sm:text-xl px-2 md:px-0">
                     <p>
-                        I’m a full-stack developer passionate about AI, building scalable solutions with clean, maintainable code. I ship fast, break nothing, and optimize performance with solid DevOps practices and AI-driven innovation.
+                        I’m a <span className='text-white'>full-stack developer</span> passionate about AI, building scalable solutions with clean, maintainable code. I ship fast, break nothing, and optimize performance with solid DevOps practices and AI-driven innovation.
                     </p>
                 </div>
                 <div className='flex flex-col sm:flex-row items-center mt-8 space-y-4 sm:space-y-0 sm:space-x-7 text-lg'>
@@ -43,7 +43,7 @@ const About = () => {
                         </Link>
                     </div>
                 </div>
-                <div id="icons" className="flex justify-center md:justify-start space-x-6 sm:space-x-8 pt-8 text-2xl">
+                <div id="icons" className="flex justify-center md:justify-start space-x-6 sm:space-x-8 pt-8 pl-1 text-[1.8rem]">
                     <Link href="https://github.com/jishkhar" target="_blank" rel="noopener noreferrer">
                         <FiGithub className="cursor-pointer transition-all duration-300 hover:text-[#5fe9df] hover:scale-125" />
                     </Link>

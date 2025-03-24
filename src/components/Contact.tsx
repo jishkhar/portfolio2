@@ -36,17 +36,17 @@ const Contact = () => {
 
   return (
     <div className="flex items-center justify-center p-6 min-h-screen">
-      <div className="flex flex-col md:flex-row shadow-lg rounded-2xl w-full max-w-4xl overflow-hidden">
+      <div className="flex flex-col md:flex-row shadow-lg rounded-2xl w-full max-w-[70vw] space-x-36 overflow-hidden">
         {/* Left Div */}
-        <div className="flex flex-col items-center p-6 md:p-10 md:w-1/2 bg-[#0b0c10] text-white text-center md:text-left">
-          <div className="text-[#54ccc4] text-xl md:text-2xl">Liked my work?</div>
-          <div className="text-2xl md:text-3xl font-bold mt-2">Reach Out to Me!</div>
-          <p className="text-[#C2C2C3] mt-4 text-sm md:text-base">
+        <div className="flex flex-col items-center justify-center p-6 md:p-10 md:w-1/2 bg-[#0b0c10] text-white text-center md:text-left">
+          <div className="text-[#54ccc4] text-xl md:text-[1.5rem]">Liked my work?</div>
+          <div className="text-2xl md:text-[2.4rem] font-bold mt-2 mb-5">Reach Out to Me!</div>
+          <p className="text-[#C2C2C3] mt-4 text-sm md:text-[1.1rem] text-center">
             I am always looking for new opportunities to work with professionals and companies. I would also like to contribute to open-source projects providing real-world value.
           </p>
           <div className="mt-6 border border-[#54ccc4] p-3 rounded-lg cursor-pointer transition-all duration-300 hover:text-[#5fe9df] hover:scale-105">
             <Link href="mailto:jishnukhargharia11@gmail.com" className="flex items-center justify-center">
-              <h1 className="mr-2">Contact Me:</h1>
+              <h1 className="mr-5 text-[1.2rem]">Contact Me:</h1>
               <MdOutlineEmail className="text-3xl" />
             </Link>
           </div>
