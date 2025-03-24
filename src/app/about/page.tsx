@@ -12,19 +12,21 @@ const AboutMe = () => {
                 </div>
 
                 <div className="flex flex-col md:flex-row max-w-[90vw] md:max-w-[70vw] mx-auto relative items-center md:items-start">
-                    <div id='left' className="w-full md:w-1/2 flex flex-col items-center md:items-start relative mt-10 md:mt-0">
-                        <div className="relative w-[250px] h-[250px] md:w-[300px] md:h-[300px] shadow-lg rounded-xl overflow-hidden transform rotate-[-10deg] z-3">
-                            <Image src="/images/me2.jpeg" alt="Profile_Photo" layout="fill" objectFit="cover" className="scale-125" />
-                        </div>
-                        <div className="relative w-[250px] h-[250px] md:w-[300px] md:h-[300px] shadow-lg rounded-xl overflow-hidden transform rotate-[12deg] z-2 mt-6">
-                            <Image src="/images/me3.jpeg" alt="Profile_Photo" layout="fill" objectFit="cover" />
-                        </div>
-                        <div className="relative w-[250px] h-[250px] md:w-[300px] md:h-[300px] shadow-lg rounded-xl overflow-hidden transform rotate-[-4deg] z-1 mt-6">
-                            <Image src="/images/me4.jpeg" alt="Profile_Photo" layout="fill" objectFit="cover" />
+                    <div id='left' className="w-full md:w-1/2 flex flex-col items-center md:items-start relative mt-10 md:mt-32">
+                        <div className="relative w-[250px] h-[250px] md:w-[300px] md:h-[300px]">
+                            <div className="absolute top-0 left-0 w-full h-full shadow-lg rounded-xl overflow-hidden transform rotate-[-10deg] z-30">
+                                <Image src="/images/me2.jpeg" alt="Profile_Photo" layout="fill" objectFit="cover" className="scale-125" />
+                            </div>
+                            <div className="absolute top-10 left-60 w-full h-full shadow-lg rounded-xl overflow-hidden transform rotate-[8deg] z-20">
+                                <Image src="/images/me3.jpeg" alt="Profile_Photo" layout="fill" objectFit="cover" />
+                            </div>
+                            <div className="absolute top-64 left-32 w-full h-full shadow-lg rounded-xl overflow-hidden transform rotate-[-6deg] z-10">
+                                <Image src="/images/me4.jpeg" alt="Profile_Photo" layout="fill" objectFit="cover" />
+                            </div>
                         </div>
                     </div>
-                    
-                    <div id='right' className="w-full md:w-1/2 text-[#ffffffac] text-[1.3rem] text-center md:text-left pt-10 md:pt-24">
+
+                    <div id='right' className="w-full md:w-1/2 text-[#ffffffac] text-[1.3rem] text-center md:text-left pt-10 md:pt-32">
                         <p>
                             <span>Hey there!</span><br /><br /> I'm <span className='text-[#5ee6dd] text-[1.5rem]'>Jishnu Khargharia</span>, a passionate full-stack developer with a strong interest in AI, ML, and Web3. Currently pursuing Computer Science and Engineering (AI & ML), I thrive on building impactful digital experiences that blend innovation with functionality.
                         </p>
