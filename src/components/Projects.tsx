@@ -48,36 +48,36 @@ type Project = {
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <div className="flex flex-col md:flex-row items-center max-w-7xl mx-auto overflow-hidden relative mb-20">
-      {/* Project Screenshot */}
-      <div className="md:w-2/3 relative">
+    <div className="flex flex-col lg:flex-row items-center max-w-7xl mx-auto overflow-hidden relative mb-20 p-4 lg:p-0">
+      {/* Project Screenshot (Visible on large screens) */}
+      <div className="lg:w-2/3 w-full relative hidden lg:block">
         <Image
           src={project.image}
           alt={`${project.project_title} Screenshot`}
           width={1200}
           height={500}
-          className="w-[800px] h-[430px] object-cover"
+          className="w-full h-auto object-cover rounded-lg"
         />
       </div>
 
       {/* Project Details */}
-      <div className="md:w-[40%] flex flex-col justify-between h-full pl-6 py-16 relative">
-        <div className="absolute top-0 right-10 text-right">
+      <div className="w-full lg:w-[40%] flex flex-col justify-between h-full lg:pl-6 py-8 relative text-center lg:text-left">
+        <div className="lg:absolute top-0 right-0 lg:right-10">
           <div className="text-teal-400 font-mono text-[1.3rem]">{project.type}</div>
-          <h2 className="text-[2.3rem] font-bold text-white mb-4">{project.project_title}</h2>
+          <h2 className="text-[2rem] font-bold text-white mb-4">{project.project_title}</h2>
         </div>
 
         {/* Description */}
-        <p className="text-gray-200 text-[1.15rem] mb-4 mt-16 w-[110%] absolute top-10 left-[-4vw] bg-[#15171F] p-10 rounded-lg backdrop-blur-sm transition-shadow duration-300 hover:shadow-lg hover:shadow-black">
+        <p className="text-gray-200 text-[1rem] lg:text-[1.15rem] mb-4 lg:mt-16 bg-[#15171F] p-6 rounded-lg shadow-lg backdrop-blur-sm transition-shadow duration-300 hover:shadow-black">
           {project.description}
         </p>
 
         {/* Tech Stack & Links */}
-        <div className="flex flex-col items-end mt-40">
-          <div className="font-mono text-[1rem] text-gray-400 mt-20 mr-8">
+        <div className="flex flex-col items-center lg:items-end mt-6 lg:mt-16">
+          <div className="font-mono text-[1rem] text-gray-400 mb-4 lg:mr-8">
             | {project.tech_stack.join(" | ")}
           </div>
-          <div className="flex space-x-4 pt-10 absolute bottom-1 mr-8">
+          <div className="flex space-x-4 pt-4">
             <Link href={project.github} className="text-white hover:text-gray-400 transition" target="_blank">
               <FiGithub className="w-7 h-7" />
             </Link>
@@ -93,18 +93,18 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
 export default function PortfolioShowcase() {
   return (
-    <div className="bg-[#0b0c10] text-white min-h-screen p-8 max-w-[70vw] mx-auto">
-      <h1 className="text-[3.2rem] font-bold pt-12 pb-24 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">
+    <div className="bg-[#0b0c10] text-white min-h-screen px-4 md:px-8 py-8 max-w-[90vw] md:max-w-[70vw] mx-auto">
+      <h1 className="text-[2.5rem] md:text-[3.2rem] font-bold pt-12 pb-16 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8 text-center md:text-left">
         Projects
       </h1>
       {project_data.map((project, index) => (
         <ProjectCard key={index} project={project} />
       ))}
-      <Link href="/projects" className="flex text-center justify-center">
-        <div className="text-[#5ee6dd] border border-[#5ee6dd] h-fit w-fit p-5 rounded-lg cursor-pointer">
+      <div className="flex justify-center mt-10">
+        <Link href="/projects" className="text-[#5ee6dd] border border-[#5ee6dd] px-6 py-3 rounded-lg cursor-pointer hover:bg-[#5ee6dd] hover:text-black transition">
           View All Projects
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 }
