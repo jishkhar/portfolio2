@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const About = () => {
     return (
-        <div className="h-fit my-20 mx-6 md:mx-20 lg:mx-40 flex flex-col md:flex-row items-center text-white">
-            <div id="right" className="md:order-2 flex justify-center md:justify-end md:w-1/2 mb-10 md:mb-0">
+        <div className="h-fit my-36 mx-6 md:mx-20 lg:mx-40 flex flex-col md:flex-row items-center justify-center text-white gap-60">
+            <div id="right" className="md:order-2 flex justify-center md:justify-end mb-10 md:mb-0">
                 <Image
                     src="/images/me1.jpg"
                     alt="Profile_Photo"
@@ -16,8 +16,8 @@ const About = () => {
                     className="shadow-lg rounded-xl w-60 sm:w-72 md:w-[450px]"
                 />
             </div>
-            
-            <div id="left" className="max-w-2xl text-center md:text-left md:order-1">
+
+            <div id="left" className="max-w-[30vw] text-center md:text-left md:order-1">
                 <div className="text-4xl sm:text-5xl font-bold">Jishnu Khargharia</div>
                 <div className='flex flex-wrap justify-center md:justify-start items-center text-gray-500 text-lg mt-2'>
                     <span>FullStack Developer</span>
