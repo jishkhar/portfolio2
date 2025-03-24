@@ -5,7 +5,7 @@ const AboutMe = () => {
     return (
         <div className='bg-[#0b0c10] min-h-screen py-10 px-6 md:px-0'>
             <div className='mb-32'>
-                <div className="md:pl-44 pt-20 pb-10 text-xl font-semibold text-center md:text-left">
+                <div className="md:pl-44 pt-36 text-xl font-semibold text-center md:text-left">
                     <p className='text-[2.5rem] text-white'>
                         Little Bit About Me
                     </p>
