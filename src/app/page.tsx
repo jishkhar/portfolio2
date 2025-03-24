@@ -12,7 +12,9 @@ export default function Home() {
         <About />
         <Projects />
         <Skills />
-        <Contact />
+        <div id="contact">
+          <Contact />
+        </div>
         <Footer />
       </main>
     </>

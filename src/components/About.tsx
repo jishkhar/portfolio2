@@ -21,7 +21,19 @@ const About = () => {
                         I’m a full-stack developer passionate about AI, building scalable solutions with clean, maintainable code. I ship fast, break nothing, and optimize performance with solid DevOps practices and AI-driven innovation.
                     </p>
                 </div>
-                <div id="icons" className="flex space-x-8 pt-12 text-[1.8rem]">
+                <div className='flex mt-12 space-x-7 text-[1.3rem]'>
+                    <div className='text-black rounded-lg border border-black bg-[#5ee6dd] p-3 cursor-pointer hover:scale-105'>
+                        <Link href="/#contact">
+                            Contact Me
+                        </Link>
+                    </div>
+                    <div className='rounded-lg border-2 border-[#5ee6dd] p-3 cursor-pointer hover:scale-105'>
+                        <Link href="/">
+                            Resume
+                        </Link>
+                    </div>
+                </div>
+                <div id="icons" className="flex space-x-8 pt-8 pl-1 text-[1.8rem]">
                     <Link href="https://github.com/jishkhar" target="_blank" rel="noopener noreferrer">
                         <FiGithub className="cursor-pointer transition-all duration-300 hover:text-[#5fe9df] hover:scale-125" />
                     </Link>

@@ -42,15 +42,15 @@ const Skills = () => {
   };
 
   return (
-    <div className="mx-auto max-w-5xl p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-900">
+    <div className="mx-auto max-w-[70vw] p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-900">
       {categories.map((category) => (
-        <div key={category.id} className={`p-5 rounded-lg shadow-md ${category.color}`}>
+        <div key={category.id} className={`p-6 rounded-lg shadow-md ${category.color}`}>
           <h3 className="text-xl font-semibold mb-3">{category.label}</h3>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-4">
             {category.techs.map((tech) => (
               <LinkPreview
                 key={tech}
-                url={techLinks[tech]}
+                url={techLinks[tech as keyof typeof techLinks]}
                 className="px-3 py-2 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 text-gray-800 transition-all"
               >
                 {tech}

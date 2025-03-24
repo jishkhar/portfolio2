@@ -24,6 +24,8 @@ const AboutMe = () => {
                                     alt="Profile_Photo"
                                     layout="fill"
                                     objectFit="cover"
+                                    objectPosition="center"
+                                    className="scale-125"
                                 />
                             </div>
                             <div
