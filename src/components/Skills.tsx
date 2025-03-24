@@ -1,16 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { LinkPreview } from "@/components/ui/link-preview";
 
 const Skills = () => {
-  const [activeTab, setActiveTab] = useState("frontend");
-
-  const tabs = [
-    { id: "frontend", label: "Frontend" },
-    { id: "backend", label: "Backend" },
-    { id: "tools", label: "Tools" },
-    { id: "languages", label: "Languages" },
-    { id: "databases", label: "Databases" }
+  const categories = [
+    { id: "frontend", label: "Frontend", color: "bg-blue-100", techs: ["React", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Next.js", "Vue.js"] },
+    { id: "backend", label: "Backend", color: "bg-green-100", techs: ["Node.js", "Express", "Django", "GraphQL", "REST API"] },
+    { id: "databases", label: "Databases", color: "bg-purple-100", techs: ["PostgreSQL", "MongoDB", "Redis", "Firebase", "MySQL"] },
+    { id: "tools", label: "Tools", color: "bg-yellow-100", techs: ["Git", "Docker", "VS Code", "CI/CD", "Jira"] },
+    { id: "languages", label: "Languages", color: "bg-red-100", techs: ["JavaScript", "Python", "Java", "C++", "Go"] }
   ];
 
   const techLinks = {
@@ -21,65 +19,46 @@ const Skills = () => {
     "HTML5": "https://developer.mozilla.org/en-US/docs/Web/HTML",
     "CSS3": "https://developer.mozilla.org/en-US/docs/Web/CSS",
     "Tailwind CSS": "https://tailwindcss.com/",
-    "React Native": "https://reactnative.dev/",
-    "Expo": "https://expo.dev/",
+    "Vue.js": "https://vuejs.org/",
     "Node.js": "https://nodejs.org/en",
     "Express": "https://expressjs.com/",
-    "Nginx": "https://www.nginx.com/",
-    "Prisma": "https://www.prisma.io/",
-    "Git": "https://git-scm.com/",
-    "Linux": "https://www.linux.org/",
-    "AWS": "https://aws.amazon.com/",
-    "CI/CD": "https://about.gitlab.com/topics/ci-cd/",
-    "C++": "https://cplusplus.com/",
-    "C": "https://en.cppreference.com/w/c",
-    "Python": "https://www.python.org/",
-    "MongoDB": "https://www.mongodb.com/",
-    "MySQL": "https://www.mysql.com/",
+    "Django": "https://www.djangoproject.com/",
+    "GraphQL": "https://graphql.org/",
+    "REST API": "https://restfulapi.net/",
     "PostgreSQL": "https://www.postgresql.org/",
-    "Redis": "https://redis.io/"
-  };
-
-  const categorizedTech = {
-    "frontend": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "React Native", "Expo"],
-    "backend": ["Node.js", "Express", "Nginx", "Prisma"],
-    "tools": ["Git", "Linux", "AWS", "CI/CD"],
-    "languages": ["C++", "C", "Python"],
-    "databases": ["MongoDB", "MySQL", "PostgreSQL", "Redis"]
+    "MongoDB": "https://www.mongodb.com/",
+    "Redis": "https://redis.io/",
+    "Firebase": "https://firebase.google.com/",
+    "MySQL": "https://www.mysql.com/",
+    "Git": "https://git-scm.com/",
+    "Docker": "https://www.docker.com/",
+    "VS Code": "https://code.visualstudio.com/",
+    "CI/CD": "https://about.gitlab.com/topics/ci-cd/",
+    "Jira": "https://www.atlassian.com/software/jira",
+    "Python": "https://www.python.org/",
+    "Java": "https://www.java.com/",
+    "C++": "https://cplusplus.com/",
+    "Go": "https://go.dev/"
   };
 
   return (
-    <div className="h-fit mx-72 pt-72 mb-40 text-gray-100">
-      <div className="text-[2.4rem] mb-10 font-semibold underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Technologies that I&apos;ve worked with...</div>
-      <div className="flex space-x-4 my-7 text-[1.2rem]">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            className={`px-6 py-3 rounded-lg transition-all duration-200 font-medium shadow-lg ${activeTab === tab.id
-              ? "bg-[#45a29e] text-[#0b0c10]"
-              : "bg-[#1f2833] text-gray-300 hover:bg-[#66fcf1] hover:text-[#0b0c10]"
-              }`}
-            onClick={() => setActiveTab(tab.id)}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-      <div className="p-6 py-10 bg-[#0b0c10] rounded-lg shadow-md h-64 overflow-y-auto">
-      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-[#f8f9fa]">
-          {categorizedTech[activeTab as keyof typeof categorizedTech]?.map((tech, index) => (
-            <li key={index} className="flex items-center gap-3 bg-[#1f2833] p-3 rounded-lg shadow-md">
-              <span className="w-2 h-2 border-4 border-[#66fcf1] rotate-45 inline-block"></span>
+    <div className="mx-auto max-w-5xl p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-900">
+      {categories.map((category) => (
+        <div key={category.id} className={`p-5 rounded-lg shadow-md ${category.color}`}>
+          <h3 className="text-xl font-semibold mb-3">{category.label}</h3>
+          <div className="flex flex-wrap gap-3">
+            {category.techs.map((tech) => (
               <LinkPreview
-                url={techLinks[tech as keyof typeof techLinks]}
-                className="hover:text-[#66fcf1] text-white transition-colors duration-200"
+                key={tech}
+                url={techLinks[tech]}
+                className="px-3 py-2 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 text-gray-800 transition-all"
               >
                 {tech}
               </LinkPreview>
-            </li>
-          ))}
-        </ul>
-      </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
