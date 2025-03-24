@@ -4,11 +4,11 @@ import { LinkPreview } from "@/components/ui/link-preview";
 
 const Skills = () => {
   const categories = [
-    { id: "frontend", label: "Frontend", color: "bg-blue-100", techs: ["React", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Next.js", "Vue.js"] },
-    { id: "backend", label: "Backend", color: "bg-green-100", techs: ["Node.js", "Express", "Django", "GraphQL", "REST API"] },
-    { id: "databases", label: "Databases", color: "bg-purple-100", techs: ["PostgreSQL", "MongoDB", "Redis", "Firebase", "MySQL"] },
-    { id: "tools", label: "Tools", color: "bg-yellow-100", techs: ["Git", "Docker", "VS Code", "CI/CD", "Jira"] },
-    { id: "languages", label: "Languages", color: "bg-red-100", techs: ["JavaScript", "Python", "Java", "C++", "Go"] }
+    { id: "frontend", label: "Frontend", techs: ["React", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Next.js", "Vue.js"] },
+    { id: "backend", label: "Backend", techs: ["Node.js", "Express", "Django", "GraphQL", "REST API"] },
+    { id: "databases", label: "Databases", techs: ["PostgreSQL", "MongoDB", "Redis", "Firebase", "MySQL"] },
+    { id: "tools", label: "Tools", techs: ["Git", "Docker", "VS Code", "CI/CD", "Jira"] },
+    { id: "languages", label: "Languages", techs: ["JavaScript", "Python", "Java", "C++", "Go"] }
   ];
 
   const techLinks = {
@@ -42,24 +42,31 @@ const Skills = () => {
   };
 
   return (
-    <div className="mx-auto max-w-[70vw] p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-900">
-      {categories.map((category) => (
-        <div key={category.id} className={`p-6 rounded-lg shadow-md ${category.color}`}>
-          <h3 className="text-xl font-semibold mb-3">{category.label}</h3>
-          <div className="flex flex-wrap gap-4">
-            {category.techs.map((tech) => (
-              <LinkPreview
-                key={tech}
-                url={techLinks[tech as keyof typeof techLinks]}
-                className="px-3 py-2 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 text-gray-800 transition-all"
-              >
-                {tech}
-              </LinkPreview>
-            ))}
-          </div>
+    <>
+      <div className="mb-40">
+        <div className="max-w-[70vw] mx-auto">
+          <h1 className="text-[3.2rem] ml-4 mt-52 my-10 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Tech Stack</h1>
         </div>
-      ))}
-    </div>
+        <div className="mx-auto max-w-[70vw] p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-900">
+          {categories.map((category) => (
+            <div key={category.id} className="p-6 rounded-lg border shadow-md">
+              <h3 className="text-xl text-[#5ee6dd] font-semibold mb-3">{category.label}</h3>
+              <div className="flex flex-wrap gap-4">
+                {category.techs.map((tech) => (
+                  <LinkPreview
+                    key={tech}
+                    url={techLinks[tech as keyof typeof techLinks]}
+                    className="px-3 py-2 border  bg-[#3a4544] border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 text-white hover:text-black transition-all"
+                  >
+                    {tech}
+                  </LinkPreview>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
