@@ -35,56 +35,59 @@ const Contact = () => {
   }
 
   return (
-    <div className="h-screen flex items-center justify-center p-6">
-      <div className="flex shadow-lg rounded-2xl w-[70vw] h-[67vh] overflow-hidden">
+    <div className="flex items-center justify-center p-6 min-h-screen">
+      <div className="flex flex-col md:flex-row shadow-lg rounded-2xl w-full max-w-4xl overflow-hidden">
         {/* Left Div */}
-        <div className="flex flex-col items-center mt-20 pr-16 w-1/2 bg-[#0b0c10] text-white text-2xl font-semibold gap-y-4">
-          <div className="text-[#54ccc4] text-center">Liked my work&#63;</div>
-          <div className="text-[2.2rem] text-center">Reach Out to Me!</div>
-          <p className="text-center text-[#C2C2C3] pt-4">
+        <div className="flex flex-col items-center p-6 md:p-10 md:w-1/2 bg-[#0b0c10] text-white text-center md:text-left">
+          <div className="text-[#54ccc4] text-xl md:text-2xl">Liked my work?</div>
+          <div className="text-2xl md:text-3xl font-bold mt-2">Reach Out to Me!</div>
+          <p className="text-[#C2C2C3] mt-4 text-sm md:text-base">
             I am always looking for new opportunities to work with professionals and companies. I would also like to contribute to open-source projects providing real-world value.
           </p>
-          <div id="icons" className="p-5 mt-10 text-[1.8rem] border rounded-lg border-[#54ccc4] flex justify-center items-center cursor-pointer transition-all duration-300 hover:text-[#5fe9df] hover:scale-105">
-            <Link href="mailto:jishnukhargharia11@gmail.com" className="flex items-center">
-              <h1>Contact Me : &nbsp;</h1>
-              <MdOutlineEmail className="text-4xl" />
+          <div className="mt-6 border border-[#54ccc4] p-3 rounded-lg cursor-pointer transition-all duration-300 hover:text-[#5fe9df] hover:scale-105">
+            <Link href="mailto:jishnukhargharia11@gmail.com" className="flex items-center justify-center">
+              <h1 className="mr-2">Contact Me:</h1>
+              <MdOutlineEmail className="text-3xl" />
             </Link>
           </div>
         </div>
         {/* Right Div */}
-        <div className="w-1/2 p-10 border rounded-lg border-[#54ccc4]">
-          <h2 className="text-[2.5rem] font-semibold text-center mb-6 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Contact Us</h2>
+        <div className="p-6 md:p-10 md:w-1/2 border border-[#54ccc4]">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Contact Us</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
-              <label className="block text-[1.3rem]">Name</label>
+              <label className="block text-lg">Name</label>
               <input
                 type="text"
                 name="name"
-                className="text-black w-full p-2 border-4 rounded-lg focus:outline-none focus:border-[#2fffe5]"
+                className="w-full p-2 border-2 rounded-lg focus:outline-none focus:border-[#2fffe5] text-black"
                 placeholder="Your Name"
+                required
               />
             </div>
             <div>
-              <label className="block text-[1.3rem] mt-4">Email</label>
+              <label className="block text-lg">Email</label>
               <input
                 type="email"
                 name="email"
-                className="text-black w-full p-2 border-4 rounded-lg focus:outline-none focus:border-[#2fffe5]"
+                className="w-full p-2 border-2 rounded-lg focus:outline-none focus:border-[#2fffe5] text-black"
                 placeholder="Your Email"
+                required
               />
             </div>
             <div>
-              <label className="block text-[1.3rem] mt-4">Message</label>
+              <label className="block text-lg">Message</label>
               <textarea
                 name="message"
-                className="text-black w-full p-2 border-4 rounded-lg focus:outline-none focus:border-[#2fffe5]"
+                className="w-full p-2 border-2 rounded-lg focus:outline-none focus:border-[#2fffe5] text-black"
                 rows={4}
                 placeholder="Your Message"
+                required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full h-14 bg-[#5ee6dd] text-[#0b0c10] p-2 rounded-lg hover:bg-[#2fffe5] transition mt-6"
+              className="w-full bg-[#5ee6dd] text-[#0b0c10] p-3 rounded-lg hover:bg-[#2fffe5] transition"
             >
               Send Message
             </button>
