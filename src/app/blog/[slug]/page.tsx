@@ -6,40 +6,47 @@ import html from 'remark-html'
 import moment from 'moment'
 
 interface PostProps {
-  params: {
-    slug: string
-  }
+    params: {
+        slug: string
+    }
 }
 
 export async function generateStaticParams() {
-  const dir = path.join(process.cwd(), 'src/content/posts')
-  const files = fs.readdirSync(dir)
+    const dir = path.join(process.cwd(), 'src/content/posts')
+    const files = fs.readdirSync(dir)
 
-  return files.map((filename) => ({
-    slug: filename.replace('.md', ''),
-  }))
+    return files.map((filename) => ({
+        slug: filename.replace('.md', ''),
+    }))
 }
 
 export default async function PostPage({ params }: PostProps) {
-  const filePath = path.join(process.cwd(), 'src/content/posts', `${params.slug}.md`)
-  const fileContent = fs.readFileSync(filePath, 'utf-8')
-  const { data, content } = matter(fileContent)
+    const filePath = path.join(process.cwd(), 'src/content/posts', `${params.slug}.md`)
+    const fileContent = fs.readFileSync(filePath, 'utf-8')
+    const { data, content } = matter(fileContent)
 
-  const processedContent = await remark().use(html).process(content)
-  const htmlContent = processedContent.toString()
+    const processedContent = await remark().use(html).process(content)
+    const htmlContent = processedContent.toString()
 
-  return (
-    <div className="bg-[#0b0c10] min-h-screen text-white p-10">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold mb-2">{data.title}</h1>
-        <p className="text-sm text-gray-400 mb-6">
-          {moment(data.date).format('MMMM D, YYYY')}
-        </p>
-        <div
-          className="prose prose-invert"
-          dangerouslySetInnerHTML={{ __html: htmlContent }}
-        />
-      </div>
-    </div>
-  )
+    return (
+        <div className="bg-[#0b0c10] min-h-screen text-white py-40">
+            <div className="max-w-5xl mx-auto">
+                <h1 className="text-5xl font-bold mb-2">{data.title}</h1>
+                <p className="text-lg text-gray-400 mb-16">
+                    {moment(data.date).format('MMMM D, YYYY')}
+                </p>
+                {data.image && (
+                    <img
+                        src={data.image}
+                        alt={data.title}
+                        className="w-full object-contain rounded-2xl mb-16 shadow-lg"
+                    />
+                )}
+                <div
+                    className=" prose-invert prose-headings:mt-12 text-xl mb-16 mx-0 px-0"
+                    dangerouslySetInnerHTML={{ __html: htmlContent }}
+                />
+            </div>
+        </div>
+    )
 }

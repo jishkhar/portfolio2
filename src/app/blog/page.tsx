@@ -31,7 +31,7 @@ export default function BlogPage() {
   const posts = getAllPosts()
 
   return (
-    <div className="bg-[#0b0c10] min-h-screen text-white p-10">
+    <div className="bg-[#0b0c10] min-h-screen text-white pt-40">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">Blog Posts</h1>
         <ul className="space-y-6">

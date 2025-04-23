@@ -38,3 +38,10 @@ body {
   background-color: rgb(67, 65, 65); /* Blue background */
   color: #5ee6dd; /* Text color when selected */
 }
+
+/* In your globals.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Optional: prevents horizontal scrolling */
+}
