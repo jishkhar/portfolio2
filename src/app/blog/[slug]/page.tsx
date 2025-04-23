@@ -14,7 +14,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
+export default async function PostPage({ params }: any) {
   const filePath = path.join(process.cwd(), 'src/content/posts', `${params.slug}.md`)
   const fileContent = fs.readFileSync(filePath, 'utf-8')
   const { data, content } = matter(fileContent)
@@ -45,3 +45,4 @@ export default async function PostPage({ params }: { params: { slug: string } })
     </div>
   )
 }
+
