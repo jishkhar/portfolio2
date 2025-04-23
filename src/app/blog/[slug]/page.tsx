@@ -4,13 +4,6 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 import moment from 'moment'
-import Image from 'next/image';
-
-interface PostPageProps {
-  params: {
-    slug: string
-  }
-}
 
 export async function generateStaticParams() {
   const dir = path.join(process.cwd(), 'src/content/posts')
@@ -21,7 +14,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function PostPage({ params }: PostPageProps) {
+export default async function PostPage({ params }: { params: { slug: string } }) {
   const filePath = path.join(process.cwd(), 'src/content/posts', `${params.slug}.md`)
   const fileContent = fs.readFileSync(filePath, 'utf-8')
   const { data, content } = matter(fileContent)
@@ -37,7 +30,7 @@ export default async function PostPage({ params }: PostPageProps) {
           {moment(data.date).format('MMMM D, YYYY')}
         </p>
         {data.image && (
-          <Image
+          <img
             src={data.image}
             alt={data.title}
             className="w-full object-contain rounded-2xl mb-16 shadow-lg"
