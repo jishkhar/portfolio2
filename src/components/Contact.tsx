@@ -41,7 +41,7 @@ const Contact = () => {
           <div className="text-[#54ccc4] text-xl md:text-[1.5rem]">Liked my work?</div>
           <div className="text-2xl md:text-[2.4rem] font-bold mt-2 mb-5">Reach Out to Me!</div>
           <p className="text-[#C2C2C3] mt-4 text-sm md:text-[1.1rem] text-center">
-            I am always looking for new opportunities to work with professionals and companies. I would also like to contribute to open-source projects providing real-world value.
+            I am always looking for new opportunities to work with professionals and companies.
           </p>
           <div className="mt-6 border border-[#54ccc4] p-3 rounded-lg cursor-pointer transition-all duration-300 hover:text-[#5fe9df] hover:scale-105">
             <Link href="mailto:jishnukhargharia11@gmail.com" className="flex items-center justify-center">
@@ -52,7 +52,7 @@ const Contact = () => {
         </div>
         {/* Right Div */}
         <div className="p-6 md:p-10 md:w-1/2 border border-[#54ccc4]">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Contact Us</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Contact</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="block text-lg">Name</label>
