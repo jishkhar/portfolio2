@@ -43,7 +43,8 @@ export default async function PostPage({ params }: PostProps) {
                     />
                 )}
                 <div
-                    className=" prose-invert prose-headings:mt-12 text-xl mb-16 mx-0 px-0"
+                    className="prose-invert prose-headings:mt-12 text-xl mb-16 mx-0 px-0 
+               prose-h2:text-cyan-400 prose-h2:text-4xl"
                     dangerouslySetInnerHTML={{ __html: htmlContent }}
                 />
             </div>
