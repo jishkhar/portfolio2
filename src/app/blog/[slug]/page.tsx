@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 import moment from 'moment'
+import Image from 'next/image';
 
 interface PostPageProps {
   params: {
@@ -36,7 +37,7 @@ export default async function PostPage({ params }: PostPageProps) {
           {moment(data.date).format('MMMM D, YYYY')}
         </p>
         {data.image && (
-          <img
+          <Image
             src={data.image}
             alt={data.title}
             className="w-full object-contain rounded-2xl mb-16 shadow-lg"
