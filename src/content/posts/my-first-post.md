@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "How AI is Transforming the World"
 date: "2025-04-23"
 ---
@@ -90,4 +90,4 @@ We stand at a pivotal moment in human history, ushered forward by the rise of AI
 
 By embracing AI’s immense potential while championing responsible and ethical use, you can help build a future where technology enhances—not replaces—human capability.
 
-Together with AI, we embark on a journey of boundless creativity, shared progress, and a more connected world.
+Together with AI, we embark on a journey of boundless creativity, shared progress, and a more connected world. -->
