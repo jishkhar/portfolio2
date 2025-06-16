@@ -48,46 +48,47 @@ type Project = {
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <div className="flex flex-col lg:flex-row items-center max-w-7xl mx-auto overflow-hidden relative mb-20 p-4 lg:p-0">
-      {/* Project Screenshot (Visible on large screens) */}
-      <div className="lg:w-2/3 w-full relative hidden lg:block">
-        <Image
-          src={project.image}
-          alt={`${project.project_title} Screenshot`}
-          width={1200}
-          height={500}
-          className="w-full h-auto object-cover rounded-lg"
-        />
+    <div className="flex flex-col lg:flex-row items-center max-w-7xl mx-auto overflow-hidden relative mb-10 p-4 lg:p-0">
+  {/* Project Screenshot (Visible on large screens) */}
+  <div className="lg:w-2/3 w-full relative hidden lg:block">
+    <Image
+      src={project.image}
+      alt={`${project.project_title} Screenshot`}
+      width={1200}
+      height={500}
+      className="w-full h-auto object-cover rounded-lg"
+    />
+  </div>
+
+  {/* Project Details */}
+  <div className="w-full lg:w-[40%] flex flex-col justify-between h-full lg:pl-6 py-4 relative text-center lg:text-left">
+    <div className="lg:absolute top-0 right-0 lg:right-10">
+      <div className="text-teal-400 font-mono text-[1.3rem]">{project.type}</div>
+      <h2 className="text-[2rem] font-bold text-white mb-4">{project.project_title}</h2>
+    </div>
+
+    {/* Description */}
+    <p className="text-gray-200 text-[1rem] lg:text-[1.15rem] mb-4 lg:mt-10 bg-[#15171F] p-6 rounded-lg shadow-lg backdrop-blur-sm transition-shadow duration-300 hover:shadow-black">
+      {project.description}
+    </p>
+
+    {/* Tech Stack & Links */}
+    <div className="flex flex-col items-center lg:items-end mt-4 lg:mt-10">
+      <div className="font-mono text-[1rem] text-gray-400 mb-4 lg:mr-8">
+        | {project.tech_stack.join(" | ")}
       </div>
-
-      {/* Project Details */}
-      <div className="w-full lg:w-[40%] flex flex-col justify-between h-full lg:pl-6 py-8 relative text-center lg:text-left">
-        <div className="lg:absolute top-0 right-0 lg:right-10">
-          <div className="text-teal-400 font-mono text-[1.3rem]">{project.type}</div>
-          <h2 className="text-[2rem] font-bold text-white mb-4">{project.project_title}</h2>
-        </div>
-
-        {/* Description */}
-        <p className="text-gray-200 text-[1rem] lg:text-[1.15rem] mb-4 lg:mt-16 bg-[#15171F] p-6 rounded-lg shadow-lg backdrop-blur-sm transition-shadow duration-300 hover:shadow-black">
-          {project.description}
-        </p>
-
-        {/* Tech Stack & Links */}
-        <div className="flex flex-col items-center lg:items-end mt-6 lg:mt-16">
-          <div className="font-mono text-[1rem] text-gray-400 mb-4 lg:mr-8">
-            | {project.tech_stack.join(" | ")}
-          </div>
-          <div className="flex space-x-4 pt-4">
-            <Link href={project.github} className="text-white hover:text-gray-400 transition" target="_blank">
-              <FiGithub className="w-7 h-7" />
-            </Link>
-            <Link href={project.website} className="text-white hover:text-gray-400 transition" target="_blank">
-              <TbExternalLink className="w-8 h-8" />
-            </Link>
-          </div>
-        </div>
+      <div className="flex space-x-4 pt-4">
+        <Link href={project.github} className="text-white hover:text-gray-400 transition" target="_blank">
+          <FiGithub className="w-7 h-7" />
+        </Link>
+        <Link href={project.website} className="text-white hover:text-gray-400 transition" target="_blank">
+          <TbExternalLink className="w-8 h-8" />
+        </Link>
       </div>
     </div>
+  </div>
+</div>
+
   );
 };
 
