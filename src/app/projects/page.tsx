@@ -5,6 +5,26 @@ import { TbExternalLink } from "react-icons/tb";
 
 const project_data = [
   {
+    image: "/images/similar.png",
+    type: "FullStack & AI",
+    project_title: "Similar.Dev",
+    description:
+      "Full-stack collaborative platform built with Next.js 14, TypeScript, and OpenAI integration, featuring real-time editing and enterprise-grade security.",
+    tech_stack: ["React", "TailwindCSS", "Node.js", "Express", "FFmpeg"],
+    github: "https://github.com/jishkhar/Vibe",
+    website: "",
+  },
+  {
+    image: "/images/transcodex.png",
+    type: "FullStack",
+    project_title: "TransCodeX",
+    description:
+      "A privacy-focused media converter built with React and Node.js that processes audio/video files locally without uploads.",
+    tech_stack: ["React", "TailwindCSS", "Node.js", "Express", "FFmpeg"],
+    github: "https://github.com/jishkhar/TransCodeX",
+    website: "https://transcode-x.vercel.app/",
+  },
+  {
     image: "/images/FinTalk.jpeg",
     type: "AI",
     project_title: "FinTalk",
@@ -13,6 +33,22 @@ const project_data = [
     tech_stack: ["Python", "SarvamAI", "Streamlit", "Gemini"],
     github: "https://github.com/jishkhar/fintalk",
     website: "https://fintalk.streamlit.app/",
+  },
+  {
+    image: "/images/aisummarizer.png",
+    type: "AI Tool",
+    project_title: "AI Summarizer",
+    description:
+      "A Chrome extension that generates AI-powered summaries of web articles in multiple formats using Google's Gemini API with secure local key storage.",
+    tech_stack: [
+      "JavaScript (ES6+)",
+      "Chrome Extension APIs",
+      "Google Gemini API",
+      "Chrome Storage API",
+      "DOM Manipulation",
+    ],
+    github: "https://github.com/jishkhar/AI-Summarizer",
+    website: "",
   },
   {
     image: "/images/corsit.png",
@@ -66,58 +102,102 @@ type Project = {
   website: string;
 };
 
-const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
-   const isReversed = index % 2 === 1;
- 
-   return (
-     <div className={`flex flex-col md:flex-row ${isReversed ? "md:flex-row-reverse right-28" : "left-28"} items-center max-w-7xl mx-auto overflow-hidden relative mb-40`}>
-       {/* Project Screenshot */}
-       <div className="md:w-2/3 relative">
-         <Image
-           src={project.image}
-           alt={`${project.project_title} Screenshot`}
-           width={1200}
-           height={500}
-           className="w-[800px] h-[430px] object-cover"
-         />
-       </div>
- 
-       {/* Project Details */}
-       <div className="md:w-[40%] flex flex-col justify-between h-full pl-6 py-16 relative">
-         {/* Project Info Top Right */}
-         <div className={`absolute top-0 ${isReversed ? "left-10 text-left" : "right-10 text-right"}`}>
-           <div className="text-teal-400 font-mono text-[1.3rem]">{project.type}</div>
-           <h2 className="text-[2.3rem] font-bold text-white mb-4">{project.project_title}</h2>
-         </div>
- 
-         {/* Description */}
-         <p className={`text-gray-200 text-[1.15rem] mb-4 mt-16 w-[110%] absolute top-10 ${isReversed ? "left-9" : "-left-20"} bg-[#15171F] p-10 rounded-lg backdrop-blur-sm transition-shadow duration-300 hover:shadow-lg hover:shadow-black`}>
-           {project.description}
-         </p>
- 
-         {/* Tech Stack & Links */}
-         <div className={`flex flex-col ${isReversed ? "items-start" : "items-end"} mt-40`}>
-           <div className={`font-mono text-[1rem] text-gray-400 mt-20 ${isReversed ? "ml-3" : "mr-8"}`}>
-             | {project.tech_stack.join(" | ")}
-           </div>
-           <div className={`flex space-x-4 pt-10 absolute bottom-1 ${isReversed ? "ml-3" : "mr-8"}`}>
-             <Link href={project.github} className="text-white hover:text-gray-400 transition" target="_blank">
-               <FiGithub className="w-7 h-7" />
-             </Link>
-             <Link href={project.website} className="text-white hover:text-gray-400 transition" target="_blank">
-               <TbExternalLink className="w-8 h-8" />
-             </Link>
-           </div>
-         </div>
-       </div>
-     </div>
-   );
- };
+const ProjectCard = ({
+  project,
+  index,
+}: {
+  project: Project;
+  index: number;
+}) => {
+  const isReversed = index % 2 === 1;
+
+  return (
+    <div
+      className={`flex flex-col md:flex-row ${
+        isReversed ? "md:flex-row-reverse right-28" : "left-28"
+      } items-center max-w-7xl mx-auto overflow-hidden relative mb-40`}
+    >
+      {/* Project Screenshot */}
+      <div className="md:w-2/3 relative">
+        <Image
+          src={project.image}
+          alt={`${project.project_title} Screenshot`}
+          width={1200}
+          height={500}
+          className="w-[800px] h-[430px] object-cover"
+        />
+      </div>
+
+      {/* Project Details */}
+      <div className="md:w-[40%] flex flex-col justify-between h-full pl-6 py-16 relative">
+        {/* Project Info Top Right */}
+        <div
+          className={`absolute top-0 ${
+            isReversed ? "left-10 text-left" : "right-10 text-right"
+          }`}
+        >
+          <div className="text-teal-400 font-mono text-[1.3rem]">
+            {project.type}
+          </div>
+          <h2 className="text-[2.3rem] font-bold text-white mb-4">
+            {project.project_title}
+          </h2>
+        </div>
+
+        {/* Description */}
+        <p
+          className={`text-gray-200 text-[1.15rem] mb-4 mt-16 w-[110%] absolute top-10 ${
+            isReversed ? "left-9" : "-left-20"
+          } bg-[#15171F] p-10 rounded-lg backdrop-blur-sm transition-shadow duration-300 hover:shadow-lg hover:shadow-black`}
+        >
+          {project.description}
+        </p>
+
+        {/* Tech Stack & Links */}
+        <div
+          className={`flex flex-col ${
+            isReversed ? "items-start" : "items-end"
+          } mt-40`}
+        >
+          <div
+            className={`font-mono text-[1rem] text-gray-400 mt-20 ${
+              isReversed ? "ml-3" : "mr-8"
+            }`}
+          >
+            | {project.tech_stack.join(" | ")}
+          </div>
+          <div
+            className={`flex space-x-4 pt-10 absolute bottom-1 ${
+              isReversed ? "ml-3" : "mr-8"
+            }`}
+          >
+            <Link
+              href={project.github}
+              className="text-white hover:text-gray-400 transition"
+              target="_blank"
+            >
+              <FiGithub className="w-7 h-7" />
+            </Link>
+            <Link
+              href={project.website}
+              className="text-white hover:text-gray-400 transition"
+              target="_blank"
+            >
+              <TbExternalLink className="w-8 h-8" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default function PortfolioShowcase() {
   return (
     <div className="bg-[#0b0c10] text-white min-h-screen p-6 md:p-8">
-      <h1 className="text-[2.5rem] md:text-[3.2rem] font-bold pt-32 pl-60 pb-16 md:pb-24 text-center md:text-left underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">Things I&apos;ve Built</h1>
+      <h1 className="text-[2.5rem] md:text-[3.2rem] font-bold pt-32 pl-60 pb-16 md:pb-24 text-center md:text-left underline decoration-wavy decoration-[#5ee6dd] underline-offset-8">
+        Things I&apos;ve Built
+      </h1>
       {project_data.map((project, index) => (
         <ProjectCard key={index} project={project} index={index} />
       ))}

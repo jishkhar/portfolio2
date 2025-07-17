@@ -5,14 +5,50 @@ import { TbExternalLink } from "react-icons/tb";
 
 const project_data = [
   {
+    image: "/images/similar.png",
+    type: "FullStack & AI",
+    project_title: "Similar.Dev",
+    description:
+      "Full-stack collaborative platform built with Next.js 14, TypeScript, and OpenAI integration, featuring real-time editing and enterprise-grade security.",
+    tech_stack: ["React", "TailwindCSS", "Node.js", "Express", "FFmpeg"],
+    github: "https://github.com/jishkhar/Vibe",
+    website: "",
+  },
+  {
+    image: "/images/transcodex.png",
+    type: "FullStack",
+    project_title: "TransCodeX",
+    description:
+      "A privacy-focused media converter built with React and Node.js that processes audio/video files locally without uploads.",
+    tech_stack: ["React", "TailwindCSS", "Node.js", "Express", "FFmpeg"],
+    github: "https://github.com/jishkhar/TransCodeX",
+    website: "https://transcode-x.vercel.app/",
+  },
+  {
     image: "/images/FinTalk.jpeg",
     type: "AI",
     project_title: "FinTalk",
     description:
-      "Fintalk: An intelligent AI advisor that simplifies legal complexities with precise, reliable insights.",
+      "An intelligent AI advisor that simplifies legal complexities with precise, reliable insights.",
     tech_stack: ["Python", "SarvamAI", "Streamlit", "Gemini"],
     github: "https://github.com/jishkhar/fintalk",
     website: "https://fintalk.streamlit.app/",
+  },
+  {
+    image: "/images/aisummarizer.png",
+    type: "AI Tool",
+    project_title: "AI Summarizer",
+    description:
+      "A Chrome extension that generates AI-powered summaries of web articles in multiple formats using Google's Gemini API with secure local key storage.",
+    tech_stack: [
+      "JavaScript (ES6+)",
+      "Chrome Extension APIs",
+      "Google Gemini API",
+      "Chrome Storage API",
+      "DOM Manipulation",
+    ],
+    github: "https://github.com/jishkhar/AI-Summarizer",
+    website: "",
   },
   {
     image: "/images/corsit.png",
@@ -23,16 +59,6 @@ const project_data = [
     tech_stack: ["ReactJS", "JavaScript", "NodeJS", "Express"],
     github: "https://github.com/Dhruva-D/Corsit",
     website: "https://www.corsit.in/",
-  },
-  {
-    image: "/images/quiz.png",
-    type: "Web App",
-    project_title: "Quizzify",
-    description:
-      "Developed an interactive quizzing web app leveraging JavaScript and real-time API integration for seamless data retrieval.",
-    tech_stack: ["JavaScript", "APIs", "Tone.js"],
-    github: "https://github.com/jishkhar/Quiz-App",
-    website: "https://quiz-app-self-zeta.vercel.app/",
   },
 ];
 
